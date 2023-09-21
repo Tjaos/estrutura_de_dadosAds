@@ -1,19 +1,18 @@
 numeros = input().split(" ")
 
-pares = []
-impares = []
+listaMae = [[],[]]
 
 i=0
 for i in range((len(numeros))):
     if int(numeros[i])%2==0:
-        pares.append(int(numeros[i]))
+        listaMae[0].append(int(numeros[i]))
     else:
-        impares.append(int(numeros[i]))
+        listaMae[1].append(int(numeros[i]))
     i=i+1
 
-pares = sorted(pares)
-impares = sorted(impares)
-print(f"{pares}, {impares}")
+listaMae[0] = sorted(listaMae[0])
+listaMae[1] = sorted(listaMae[1])
+print(f"{listaMae}")
 
 
 #print(type(int(numeros[0])))
